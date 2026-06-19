@@ -151,3 +151,13 @@ function addNewProduct (){
 addProductBtn.addEventListener(`click`, addNewProduct);
 
 // 18
+const deleteBtns = document.querySelectorAll(`.deleteBtn`);
+
+deleteBtns.forEach((button)=>{
+    button.addEventListener(`click`, (event)=>{
+        const currentBtn = event.target;
+        const parentLi = currentBtn.parentElement;
+        parentLi.remove();
+    })
+    
+})
